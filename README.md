@@ -26,6 +26,12 @@ npm start //prod-server
 - "Pechenyice" with \<your-github-nickname\>
 - "deployNextToGHPages" with \<your-github-project\>
 
+<br/>
+
+**if you are using Windows, replace "touch build/.nojekyll" with "type NUL > ./build/.nojekyll"**
+
+<br/>
+
 2. Change next.config.js:
 
 - "Pechenyice" with \<your-github-nickname\>
