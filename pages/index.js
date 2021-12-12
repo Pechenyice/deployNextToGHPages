@@ -1,17 +1,15 @@
-import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import styles from "../styles/Home.module.css";
 import next from "./../public/next.png";
 import gh from "./../public/gh.jpeg";
-import Link from "next/link";
-import { prefix } from "../env/env";
 
 export default function Home() {
   return (
     <div className={styles.container}>
-      <p>Hello, let me show you this bootstrap:</p>
+      <p>Hello, let me show you this [EASY] bootstrap:</p>
       <span style={{ color: "blue" }}>
-        <Link href="/manual" as={`${""}/manual`}>
+        <Link href="/manual" as={`/manual`}>
           to manual page
         </Link>
       </span>
