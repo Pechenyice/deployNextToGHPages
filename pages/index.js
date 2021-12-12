@@ -7,7 +7,10 @@ import gh from "./../public/gh.jpeg";
 export default function Home() {
   return (
     <div className={styles.container}>
-      <p>Hello, let me show you this [EASY] bootstrap:</p>
+      <p>
+        Hello, let me show you this [EASY] bootstrap for next.js deployment to
+        gh-pages:
+      </p>
       <span style={{ color: "blue" }}>
         <Link href="/manual" as={`/manual`}>
           to manual page
