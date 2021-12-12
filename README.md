@@ -1,34 +1,56 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Deploy Next.js app to Github pages
 
-## Getting Started
+## About
 
-First, run the development server:
+read full article on habr (same name)
 
-```bash
-npm run dev
-# or
-yarn dev
+deployment: https://pechenyice.github.io/deployNextToGHPages/
+
+## Installation
+
+```
+git clone https://github.com/Pechenyice/deployNextToGHPages.git
+cd deployNextToGHPages
+
+npm i
+npm run dev //dev-server
+
+npm run build
+npm start //prod-server
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Instructions
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+1. Change package.json:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- "Pechenyice" with \<your-github-nickname\>
+- "deployNextToGHPages" with \<your-github-project\>
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+2. Change next.config.js:
 
-## Learn More
+- "Pechenyice" with \<your-github-nickname\>
+- "deployNextToGHPages" with \<your-github-project\>
 
-To learn more about Next.js, take a look at the following resources:
+3. Deploy your app with
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+npm run deploy
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Important
 
-## Deploy on Vercel
+1. Use Images like this (don't specify img src as '/img.png')
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+import next from "./../public/next.png";
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<Image src={next} />
+```
+
+2. Use Links like always
+
+```
+<Link href="/manual" as={`/manual`}>
+    to manual page
+</Link>
+```
